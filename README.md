@@ -5,8 +5,32 @@ Para tener exito en el desarrollo de esta app, se hizo lo siguiente:
 ```
 ng new <nombre_proyecto> --standalone=false
 ```
-Se crea un componente:
+Creamos el componente **AdviceComponent**:
 ```
 ng generate component advice
 ```
+Luego, creamos el servicio **AdviceService**:
+```
+ng generate service advice
+```
+## Configuramos el servicio HTTP
+Vamos al archivo **advice.service.ts** y lo configuramos para consumir la API.
+```
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
+@Injectable({
+  providedIn: 'root'
+})
+export class AdviceService {
+  private apiUrl = 'https://api.adviceslip.com/advice';
+
+  constructor(private http: HttpClient) { }
+
+  getAdvice(): Observable<any> {
+    return this.http.get<any>(this.apiUrl);
+  }
+}
+
+```
