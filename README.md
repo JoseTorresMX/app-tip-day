@@ -1,5 +1,5 @@
 # El consejo del Dia
-Esta app desarrollada en angular consume una API [Advice Slip](https://api.adviceslip.com, el cual tiene una estrucra de un titulo, el consejo y un boton para generar el texto.
+Esta app desarrollada en angular consume una API [Advice Slip](https://api.adviceslip.com), el cual tiene una estrucra de un titulo, el consejo y un boton para generar el texto.
 ![Codigo funcionando y mostrando consejo](img/image.png)
 
 Para tener exito en el desarrollo de esta app, se hizo lo siguiente:
